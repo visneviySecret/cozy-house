@@ -1,8 +1,10 @@
 <template>
     <div class="card">
-        <nuxt-img src="/pets-katrine.png" />
+        <img :src="imgSrc" />
 
-        <h4>Katrine</h4>
+        <h4>
+            <slot></slot>
+        </h4>
 
         <Button :theme="'outlined'" :onclick="handleClick">
             <a>Learn more</a>
@@ -12,9 +14,9 @@
 
 <script setup>
 import Button from '/src/shared/Button'
-const props = defineProps(['url'])
+const { url, imgSrc } = defineProps(['url', 'imgSrc'])
 const handleClick = () => {
-    window.open(props.url, '_blank')
+    window.open(url, '_blank')
 }
 </script>
 
