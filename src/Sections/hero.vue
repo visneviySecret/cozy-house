@@ -1,5 +1,5 @@
 <template>
-    <section class="wrapper">
+    <main class="wrapper">
         <div class="container">
             <header>
                 <h2>Not only people<br />need a house</h2>
@@ -15,12 +15,12 @@
                 src="/assets/hero_puppy/large.png"
                 srcset="
             /assets/hero_puppy/small.png 320w
-            /assets/hero_puppy/medium.png 750w
+            /assets/hero_puppy/medium.png 768w
             /assets/hero_puppy/large.png 1200w
             "
             />
         </div>
-    </section>
+    </main>
 </template>
 
 <script setup>
