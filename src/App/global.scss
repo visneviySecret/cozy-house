@@ -1,0 +1,54 @@
+/* Color styles */
+$color-light-xl: rgba(255, 255, 255, 1);
+$color-light-l: rgba(246, 246, 246, 1);
+$color-light-s: rgba(250, 250, 250, 1);
+$color-dark-s: rgba(205, 205, 205, 1);
+$color-dark-m: rgba(178, 178, 178, 1);
+$color-dark-l: rgba(84, 84, 84, 1);
+$color-dark-xl: rgba(76, 76, 76, 1);
+$color-dark-2xl: rgba(68, 68, 68, 1);
+$color-dark-3xl: rgba(41, 41, 41, 1);
+$color-primary: rgba(241, 205, 179, 1);
+$color-primary-light: rgba(253, 220, 196, 1);
+$start-screen-gradient-background: rgba(33, 31, 32, 1);
+$footer-gradient-background: rgba(33, 31, 32, 1);
+
+/* Text-size styles */
+$h2: 44px;
+$h3: 35px;
+$h3-mobile: 25px;
+$h4: 20px;
+$h5: 15px;
+$h5-modal-window: 15px;
+$paragraph-l: 15px;
+$paragraph-s: 12px;
+$paragraph-mobile-menu: 32px;
+$logo_title: 32px;
+$logo_subtitle: 13px;
+
+/* Effect styles */
+$card-hover: 0px 2px 35px rgba(13, 13, 13, 0.04);
+
+// Глобальные стили
+:root {
+    --color-light-xl: #{$color-light-xl};
+    --color-light-l: #{$color-light-l};
+    --color-light-s: #{$color-light-s};
+    --color-dark-s: #{$color-dark-s};
+    --color-dark-m: #{$color-dark-m};
+    --color-dark-l: #{$color-dark-l};
+    --color-dark-xl: #{$color-dark-xl};
+    --color-dark-2xl: #{$color-dark-2xl};
+    --color-dark-3xl: #{$color-dark-3xl};
+    --color-primary: #{$color-primary};
+    --color-primary-light: #{$color-primary-light};
+    --color-screen-gradient-background: #{$start-screen-gradient-background};
+    --color-gradient-background: #{$footer-gradient-background};
+}
+
+button {
+    font-size: 17px;
+    font-family: Georgia;
+    color: var(--color-dark-3xl);
+    box-sizing: border-box;
+}
