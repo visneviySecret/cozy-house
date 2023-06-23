@@ -5,4 +5,5 @@ export default defineNuxtConfig({
     dir: {
         pages: 'src/Pages/',
     },
+    modules: ['@nuxt/image'],
 })

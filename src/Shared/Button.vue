@@ -1,12 +1,12 @@
 <template>
-    <button @click="handler" :class="dynamicClass">
+    <button @click="onclick" :class="dynamicClass">
         <slot />
     </button>
 </template>
 
 <script setup>
 import { defineProps } from 'vue'
-const props = defineProps(['handler', 'theme'])
+const props = defineProps(['onclick', 'theme'])
 const dynamicClass = props.theme || 'primary'
 </script>
 
@@ -18,11 +18,11 @@ button {
     border-radius: 100px;
     letter-spacing: 1.02px;
     line-height: 130%;
-    background-color: white;
+    background-color: transparent;
+    cursor: pointer;
 
     &:hover {
         background-color: var(--color-primary-light);
-        cursor: pointer;
         transition: background-color 0.3s;
     }
 }
@@ -31,6 +31,6 @@ button {
     background-color: var(--color-primary);
 }
 .outlined {
-    border: 2px solid #f1cdb3;
+    border: 2px solid var(--color-primary-light);
 }
 </style>

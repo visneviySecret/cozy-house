@@ -52,3 +52,93 @@ button {
     color: var(--color-dark-3xl);
     box-sizing: border-box;
 }
+
+h2 {
+    color: var(--color-dark-l);
+    font-size: 44px;
+    font-family: Georgia;
+    line-height: 130%;
+}
+
+h3 {
+    color: var(--color-dark-l);
+    font-size: 35px;
+    font-family: Georgia;
+    line-height: 130%;
+    letter-spacing: 2.1px;
+}
+
+h4 {
+    color: var(--color-dark-l);
+    font-size: 20px;
+    font-family: Georgia;
+    line-height: 115%;
+    letter-spacing: 1.2px;
+}
+
+h5 {
+    color: var(--color-dark-l);
+    font-size: 15px;
+    font-family: Georgia;
+    line-height: 110%;
+    letter-spacing: 0.9px;
+}
+
+p {
+    color: var(--color-dark-xl);
+    font-size: 15px;
+    font-family: Arial;
+    line-height: 160%;
+}
+
+span {
+    color: #000;
+    font-size: 15px;
+    font-family: Georgia;
+    font-weight: 700;
+    line-height: 110%;
+    letter-spacing: 0.9px;
+}
+
+.logo {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 32px;
+    font-family: Georgia;
+    font-style: italic;
+    line-height: 130%;
+}
+
+.title {
+    color: var(--color-primary);
+    font-size: 32px;
+    font-family: Georgia;
+    line-height: 110%;
+    letter-spacing: 1.92px;
+}
+
+.sub-title {
+    color: var(--color-light-xl);
+    font-size: 13px;
+    font-family: Arial;
+    letter-spacing: 1.3px;
+}
+
+a {
+    color: #545454;
+    font-size: 15px;
+    font-family: Arial;
+    line-height: 160%;
+
+    &:hover {
+        color: var(--color-dark-3-xl);
+    }
+}
+
+a .alternative {
+    color: #cdcdcd;
+
+    &:active,
+    &:hover {
+        color: var(--color-dark-s);
+    }
+}
