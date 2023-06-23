@@ -13,6 +13,11 @@ $color-primary-light: rgba(253, 220, 196, 1);
 $start-screen-gradient-background: rgba(33, 31, 32, 1);
 $footer-gradient-background: rgba(33, 31, 32, 1);
 
+/* Breakpoint */
+$mobile: 320px;
+$tablet: 768px;
+$desktop: 1280px;
+
 /* Text-size styles */
 $h2: 44px;
 $h3: 35px;
@@ -44,42 +49,42 @@ $card-hover: 0px 2px 35px rgba(13, 13, 13, 0.04);
     --color-primary-light: #{$color-primary-light};
     --color-screen-gradient-background: #{$start-screen-gradient-background};
     --color-gradient-background: #{$footer-gradient-background};
+    --mobile: #{breakpoint-mobile};
+    --tablet: #{breakpoint-tablet};
+    --desktop: #{breakpoint-desktop};
 }
 
-button {
-    font-size: 17px;
-    font-family: Georgia;
-    color: var(--color-dark-3xl);
-    box-sizing: border-box;
+body {
+}
+
+.container {
+    margin-inline: auto;
+    width: min($desktop, 93.75%);
 }
 
 h2 {
-    color: var(--color-dark-l);
-    font-size: 44px;
-    font-family: Georgia;
+    font-size: clamp(25px, 4.58vw, 44px);
     line-height: 130%;
+    @media (max-width: $mobile) {
+        letter-spacing: 1.5px;
+    }
 }
 
 h3 {
-    color: var(--color-dark-l);
     font-size: 35px;
-    font-family: Georgia;
+    font-size: 1rem;
     line-height: 130%;
     letter-spacing: 2.1px;
 }
 
 h4 {
-    color: var(--color-dark-l);
     font-size: 20px;
-    font-family: Georgia;
     line-height: 115%;
     letter-spacing: 1.2px;
 }
 
 h5 {
-    color: var(--color-dark-l);
     font-size: 15px;
-    font-family: Georgia;
     line-height: 110%;
     letter-spacing: 0.9px;
 }
@@ -94,16 +99,20 @@ p {
 span {
     color: #000;
     font-size: 15px;
-    font-family: Georgia;
     font-weight: 700;
     line-height: 110%;
     letter-spacing: 0.9px;
 }
 
+button {
+    font-size: 17px;
+    color: var(--color-dark-3xl);
+    box-sizing: border-box;
+}
+
 .logo {
     color: rgba(255, 255, 255, 0.5);
     font-size: 32px;
-    font-family: Georgia;
     font-style: italic;
     line-height: 130%;
 }
@@ -111,7 +120,6 @@ span {
 .title {
     color: var(--color-primary);
     font-size: 32px;
-    font-family: Georgia;
     line-height: 110%;
     letter-spacing: 1.92px;
 }
@@ -119,14 +127,12 @@ span {
 .sub-title {
     color: var(--color-light-xl);
     font-size: 13px;
-    font-family: Arial;
     letter-spacing: 1.3px;
 }
 
 a {
     color: #545454;
     font-size: 15px;
-    font-family: Arial;
     line-height: 160%;
 
     &:hover {
@@ -141,4 +147,50 @@ a .alternative {
     &:hover {
         color: var(--color-dark-s);
     }
+}
+
+h2,
+h3,
+h4,
+h5 {
+    color: var(--color-dark-l);
+}
+h2,
+h3,
+h4,
+h5,
+p {
+    text-align: center;
+
+    @media (min-width: $tablet) {
+        text-align: left;
+    }
+}
+h2,
+h3,
+h4,
+h5,
+span,
+button,
+.logo,
+.title {
+    font-family: Georgia;
+}
+.sub-title,
+a {
+    font-family: Arial;
+}
+
+p,
+h2,
+h3,
+h4,
+h5,
+span,
+button,
+.logo,
+.title,
+body {
+    font-family: Georgia;
+    margin: 0;
 }

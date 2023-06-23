@@ -1,11 +1,7 @@
 <template>
-    <div>Hi new app! Meet new Button!</div>
-    <Card />
+    <Hero />
 </template>
 
 <script setup>
-import Card from '/src/Entites/Card'
-const logHello = () => {
-    console.log('hello')
-}
+import Hero from '/src/Sections/hero.vue'
 </script>
