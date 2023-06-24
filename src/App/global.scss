@@ -60,6 +60,7 @@ $card-hover: 0px 2px 35px rgba(13, 13, 13, 0.04);
 }
 
 section {
+    text-align: center;
     padding-top: clamp(42px, 10.5vw, 80px);
     padding-bottom: clamp(42px, 13vw, 100px);
 }
@@ -75,10 +76,7 @@ h2 {
 h3 {
     font-size: clamp(25px, 5vw, 35px);
     line-height: 130%;
-    letter-spacing: 2.1px;
-    @media (max-width: $mobile) {
-        letter-spacing: 1.5px;
-    }
+    letter-spacing: clamp(1.5px, 0.4vw, 2.1px);
 }
 
 h4 {
@@ -88,7 +86,6 @@ h4 {
 }
 
 h5 {
-    font-size: 15px;
     font-size: clamp(15px, 3vw, 20px);
     line-height: clamp(110%, 2.5vw, 115%);
     letter-spacing: clamp(0.9px, 0.2vw, 1.2px);
@@ -102,11 +99,13 @@ p {
 }
 
 span {
-    color: #000;
     font-size: 15px;
-    font-weight: 700;
-    line-height: 110%;
-    letter-spacing: 0.9px;
+    line-height: 160%;
+
+    @media (min-width: $tablet) {
+        line-height: 110%;
+        letter-spacing: 0.9px;
+    }
 }
 
 button {
@@ -157,7 +156,8 @@ a .alternative {
 h2,
 h3,
 h4,
-h5 {
+h5,
+span {
     color: var(--color-dark-l);
 }
 h2,

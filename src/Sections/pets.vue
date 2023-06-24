@@ -21,7 +21,6 @@ import PetsSwiper from '/src/Features/PetsSwiper'
 
 section {
     background: $color-light-l;
-    text-align: center;
 }
 
 h3 {

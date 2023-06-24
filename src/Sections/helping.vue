@@ -24,10 +24,6 @@ import helps from '/public/content/shelter-helps'
 <style lang="scss" scoped>
 @import '/src/App/global.scss';
 
-section {
-    text-align: center;
-}
-
 h3 {
     text-align: center;
     margin-bottom: clamp(42px, 8vw, 60px);

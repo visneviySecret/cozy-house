@@ -20,7 +20,7 @@
                 to the pets and would hardly ever leave them alone.
             </p>
         </div>
-        <nuxt-img
+        <NuxtImg
             class="hero-img"
             src="/assets/about_pets/medium.png"
             srcset="
@@ -36,7 +36,6 @@
 section {
     max-width: 430px;
     margin-inline: auto;
-    text-align: center;
 
     @media (min-width: $desktop) {
         display: flex;
@@ -66,5 +65,9 @@ p:last-of-type {
     @media (min-width: $desktop) {
         margin-bottom: 0px;
     }
+}
+
+img {
+    max-width: 100%;
 }
 </style>
