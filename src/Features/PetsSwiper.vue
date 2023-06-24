@@ -16,7 +16,7 @@
 
 <script setup>
 import Card from '/src/Entites/Card'
-import SwiperControls from '/src/Features/SwiperControls'
+import SwiperControls from '/src/Entites/SwiperControls'
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import 'swiper/css'
 import pets from '/public/content/pets.json'

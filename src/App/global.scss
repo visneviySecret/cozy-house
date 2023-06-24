@@ -89,8 +89,9 @@ h4 {
 
 h5 {
     font-size: 15px;
-    line-height: 110%;
-    letter-spacing: 0.9px;
+    font-size: clamp(15px, 3vw, 20px);
+    line-height: clamp(110%, 2.5vw, 115%);
+    letter-spacing: clamp(0.9px, 0.2vw, 1.2px);
 }
 
 p {
