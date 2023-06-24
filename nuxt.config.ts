@@ -6,4 +6,10 @@ export default defineNuxtConfig({
         pages: 'src/Pages/',
     },
     modules: ['@nuxt/image'],
+    app: {
+        head: {
+            title: 'Cozy House',
+            meta: [{ name: 'description', content: 'Shelter-dom' }],
+        },
+    },
 })

@@ -1,5 +1,5 @@
 <template>
-    <button @click="handler" :class="dynamicClass">
+    <button :class="dynamicClass">
         <div class="content">
             <slot />
         </div>
@@ -8,7 +8,7 @@
 
 <script setup>
 import { defineProps } from 'vue'
-const props = defineProps(['handler', 'theme'])
+const props = defineProps(['theme'])
 const dynamicClass = props.theme || 'outlined'
 </script>
 
@@ -16,21 +16,19 @@ const dynamicClass = props.theme || 'outlined'
 button {
     display: flex;
     width: 52px;
-    aspect-ratio: 1 / 1;
+    height: 52px;
     border-radius: 50%;
-    background-color: white;
+    background-color: transparent;
     border: 2px solid var(--color-primary);
     align-items: center;
     justify-content: space-around;
-    transition: border-radius 0.3s ease-in-out, rotate 0.3s;
+    transition: border-radius 0.3s ease-in-out;
 
     &:hover {
         background-color: var(--color-primary-light);
         cursor: pointer;
         border-radius: 0%;
-        transition: background-color 0.3s, border-radius 0.3s ease-in-out,
-            rotate 0.3s;
-        rotate: 90deg;
+        transition: background-color 0.3s, border-radius 0.3s ease-in-out;
     }
 }
 .primary {
@@ -53,8 +51,5 @@ button {
     font-size: 20px;
     line-height: 115%;
     letter-spacing: 1.2px;
-    &:hover {
-        rotate: 90deg;
-    }
 }
 </style>

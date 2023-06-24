@@ -1,0 +1,33 @@
+<template>
+    <div class="buttons-wrapper">
+        <RoundButton @click="swiper.slidePrev()">{{ `<` }}</RoundButton>
+        <RoundButton @click="swiper.slideNext()">{{ `>` }}</RoundButton>
+    </div>
+</template>
+
+<script setup>
+import RoundButton from '/src/shared/RoundButton'
+import { useSwiper } from 'swiper/vue'
+
+const swiper = useSwiper()
+</script>
+
+<style lang="scss" scoped>
+@import '/src/App/global.scss';
+.buttons-wrapper {
+    width: 184px;
+    margin: 20px auto 0;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+
+    @media (min-width: $tablet) {
+        position: absolute;
+        inset: 0;
+        top: 40%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+</style>

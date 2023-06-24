@@ -1,19 +1,18 @@
 <template>
-    <button @click="onclick" :class="dynamicClass">
+    <button :class="dynamicClass">
         <slot />
     </button>
 </template>
 
 <script setup>
 import { defineProps } from 'vue'
-const props = defineProps(['onclick', 'theme'])
+const props = defineProps(['theme'])
 const dynamicClass = props.theme || 'primary'
 </script>
 
 <style lang="scss" scoped>
 button {
     height: 56px;
-    width: 212px;
     padding: 15px 45px;
     border-radius: 100px;
     letter-spacing: 1.02px;

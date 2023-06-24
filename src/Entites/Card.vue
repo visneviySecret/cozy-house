@@ -25,8 +25,8 @@ const handleClick = () => {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: var(--color-dark-3xl);
     width: 270px;
+    margin-inline: auto;
     border-radius: 9px;
     background: var(--color-light-s);
     transition: background-color 0.1s;

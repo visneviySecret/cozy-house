@@ -54,9 +54,6 @@ $card-hover: 0px 2px 35px rgba(13, 13, 13, 0.04);
     --desktop: #{breakpoint-desktop};
 }
 
-body {
-}
-
 .container {
     margin-inline: auto;
     width: min($desktop, 93.75%);
@@ -76,10 +73,12 @@ h2 {
 }
 
 h3 {
-    font-size: 35px;
     font-size: clamp(25px, 5vw, 35px);
     line-height: 130%;
     letter-spacing: 2.1px;
+    @media (max-width: $mobile) {
+        letter-spacing: 1.5px;
+    }
 }
 
 h4 {
@@ -171,16 +170,7 @@ p {
         text-align: left;
     }
 }
-h2,
-h3,
-h4,
-h5,
-span,
-button,
-.logo,
-.title {
-    font-family: Georgia;
-}
+
 .sub-title,
 a {
     font-family: Arial;
