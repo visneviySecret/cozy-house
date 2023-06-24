@@ -4,6 +4,7 @@
     <Pets />
     <Helping />
     <Donation />
+    <Footer />
 </template>
 
 <script setup>
@@ -12,4 +13,5 @@ import About from '/src/Sections/about.vue'
 import Pets from '/src/Sections/pets.vue'
 import Helping from '/src/Sections/helping.vue'
 import Donation from '/src/Sections/donation.vue'
+import Footer from '/src/Sections/footer.vue'
 </script>

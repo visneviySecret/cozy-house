@@ -7,13 +7,11 @@
                     make a donation
                 </h3>
                 <span>Name of the bank / Type of bank account</span>
-                <div style="display: inline-block">
-                    <div class="flex">
-                        <NuxtImg src="/assets/help_icons/credit-card.svg" />
-                        <h5>
-                            {{ cardNumber }}
-                        </h5>
-                    </div>
+                <div class="credit-card">
+                    <NuxtImg src="/assets/help_icons/credit-card.svg" />
+                    <h5>
+                        {{ cardNumber }}
+                    </h5>
                 </div>
                 <p>
                     Legal information and lorem ipsum dolor sit amet,
@@ -78,7 +76,7 @@ img {
     max-width: 100%;
 }
 
-.flex {
+.credit-card {
     display: flex;
     gap: 10px;
     background-color: $color-primary;

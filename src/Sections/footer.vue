@@ -1,0 +1,110 @@
+<template>
+    <footer>
+        <div class="contacts">
+            <div class="topic">
+                <h3>For questions and suggestions</h3>
+                <div class="row">
+                    <NuxtImg src="/assets/contacts_icons/icon-email.svg" />
+                    <h4>email@shelter.com</h4>
+                </div>
+                <div class="row">
+                    <NuxtImg src="/assets/contacts_icons/icon-phone.svg" />
+                    <h4>+13 674 567 75 54</h4>
+                </div>
+            </div>
+            <div class="topic">
+                <h3>We are waiting for your visit</h3>
+                <div class="row">
+                    <NuxtImg src="/assets/contacts_icons/icon-marker.svg" />
+                    <h4>
+                        1 Central Street, Boston<br />(entrance from the store)
+                    </h4>
+                </div>
+                <div class="row">
+                    <NuxtImg src="/assets/contacts_icons/icon-marker.svg" />
+                    <h4>18 South Park, London</h4>
+                </div>
+            </div>
+        </div>
+        <NuxtImg
+            class="puppy-img"
+            src="/assets/footer_puppy/medium.png"
+            srcset="
+            /assets/footer_puppy/small.png 320w
+            /assets/footer_puppy/medium.png 768w
+            "
+        />
+    </footer>
+</template>
+
+<script setup></script>
+
+<style lang="scss" scoped>
+@import '/src/App/global.scss';
+
+footer {
+    background: var(
+        ---footer-gradient-background,
+        url('/public/assets/noise_transparent.png'),
+        radial-gradient(549.89% 73.65% at 5.73% 50%, #513d2f 0%, #1a1a1c 100%),
+        #211f20
+    );
+    text-align: center;
+
+    @media (min-width: $desktop) {
+        display: flex;
+    }
+}
+.contacts {
+    padding: clamp(30px, 4vw, 40px) clamp(10px, 4vw, 40px);
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    @media (min-width: $tablet) {
+        flex-direction: row;
+    }
+}
+.topic > :not(:last-child) {
+    margin-bottom: 40px;
+}
+
+h3 {
+    color: var(--color-light-xl);
+}
+
+.row {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    margin-inline: auto;
+
+    @media (min-width: $tablet) {
+        margin-inline: 0;
+        justify-content: flex-start;
+    }
+}
+.topic:last-of-type > * > img {
+    margin-right: auto;
+    @media (min-width: $tablet) {
+        margin-right: 0;
+    }
+}
+.topic:last-of-type .row {
+    max-width: 300px;
+}
+h4 {
+    color: var(--color-primary);
+}
+
+.puppy-img {
+    max-width: 100%;
+    translate: 0 4px;
+
+    @media (min-width: $desktop) {
+        padding: clamp(30px, 4vw, 40px) clamp(10px, 4vw, 40px) 0 0;
+        translate: 0;
+    }
+}
+</style>

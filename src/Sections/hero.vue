@@ -10,7 +10,7 @@
                 </p>
                 <Button>Make a friend</Button>
             </header>
-            <nuxt-img
+            <NuxtImg
                 class="hero-img"
                 src="/assets/hero_puppy/large.png"
                 srcset="
