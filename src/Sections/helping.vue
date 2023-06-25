@@ -1,5 +1,5 @@
 <template>
-    <section class="container">
+    <section id="helping" class="container">
         <h3>
             How you can help<br />
             our shelter

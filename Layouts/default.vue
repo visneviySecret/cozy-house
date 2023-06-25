@@ -1,15 +1,12 @@
 <template>
-    <header>
-        <div>Hello</div>
-    </header>
-
+    <Navigation />
     <slot />
-
-    <footer>
-        <div>Bye</div>
-    </footer>
+    <Footer />
 </template>
 
-<script setup></script>
+<script setup>
+import Navigation from '/src/Sections/navigation'
+import Footer from '/src/Sections/footer'
+</script>
 
 <style lang="scss" scoped></style>

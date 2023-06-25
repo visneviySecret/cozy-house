@@ -1,39 +1,42 @@
 <template>
-    <footer>
-        <div class="contacts">
-            <div class="topic">
-                <h3>For questions and suggestions</h3>
-                <div class="row">
-                    <NuxtImg src="/assets/contacts_icons/icon-email.svg" />
-                    <h4>email@shelter.com</h4>
+    <footer id="footer">
+        <div class="container">
+            <div class="contacts">
+                <div class="topic">
+                    <h3>For questions and suggestions</h3>
+                    <div class="row">
+                        <NuxtImg src="/assets/contacts_icons/icon-email.svg" />
+                        <h4>email@shelter.com</h4>
+                    </div>
+                    <div class="row">
+                        <NuxtImg src="/assets/contacts_icons/icon-phone.svg" />
+                        <h4>+13 674 567 75 54</h4>
+                    </div>
                 </div>
-                <div class="row">
-                    <NuxtImg src="/assets/contacts_icons/icon-phone.svg" />
-                    <h4>+13 674 567 75 54</h4>
+                <div class="topic">
+                    <h3>We are waiting for your visit</h3>
+                    <div class="row">
+                        <NuxtImg src="/assets/contacts_icons/icon-marker.svg" />
+                        <h4>
+                            1 Central Street, Boston<br />(entrance from the
+                            store)
+                        </h4>
+                    </div>
+                    <div class="row">
+                        <NuxtImg src="/assets/contacts_icons/icon-marker.svg" />
+                        <h4>18 South Park, London</h4>
+                    </div>
                 </div>
             </div>
-            <div class="topic">
-                <h3>We are waiting for your visit</h3>
-                <div class="row">
-                    <NuxtImg src="/assets/contacts_icons/icon-marker.svg" />
-                    <h4>
-                        1 Central Street, Boston<br />(entrance from the store)
-                    </h4>
-                </div>
-                <div class="row">
-                    <NuxtImg src="/assets/contacts_icons/icon-marker.svg" />
-                    <h4>18 South Park, London</h4>
-                </div>
-            </div>
-        </div>
-        <NuxtImg
-            class="puppy-img"
-            src="/assets/footer_puppy/medium.png"
-            srcset="
+            <NuxtImg
+                class="puppy-img"
+                src="/assets/footer_puppy/medium.png"
+                srcset="
             /assets/footer_puppy/small.png 320w
             /assets/footer_puppy/medium.png 768w
             "
-        />
+            />
+        </div>
     </footer>
 </template>
 
@@ -43,6 +46,7 @@
 @import '/src/App/global.scss';
 
 footer {
+    padding-top: clamp(30px, 4vw, 40px);
     background: var(
         ---footer-gradient-background,
         url('/public/assets/noise_transparent.png'),
@@ -50,19 +54,26 @@ footer {
         #211f20
     );
     text-align: center;
-
+}
+.container {
     @media (min-width: $desktop) {
         display: flex;
     }
 }
 .contacts {
-    padding: clamp(30px, 4vw, 40px) clamp(10px, 4vw, 40px);
     display: flex;
     flex-direction: column;
     gap: 40px;
+    padding-bottom: 40px;
 
     @media (min-width: $tablet) {
         flex-direction: row;
+        padding-bottom: 69px;
+        padding-inline: 34px;
+    }
+
+    @media (min-width: $desktop) {
+        padding-inline: 0px;
     }
 }
 .topic > :not(:last-child) {
@@ -70,7 +81,9 @@ footer {
 }
 
 h3 {
+    display: inline-block;
     color: var(--color-light-xl);
+    text-wrap: balance;
 }
 
 .row {
