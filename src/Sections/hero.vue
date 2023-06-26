@@ -8,7 +8,7 @@
                     extremely wide and open heart. He or she will love you more
                     than anybody else in the world, you will see!
                 </p>
-                <Button>Make a friend</Button>
+                <Button @click="navigateTo('#pets')"> Make a friend </Button>
             </header>
             <NuxtImg
                 class="hero-img"

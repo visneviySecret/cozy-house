@@ -1,7 +1,7 @@
 <template>
     <div class="header-container" :class="{ alternative: !isAlternative }">
         <header>
-            <div class="logo">
+            <div class="logo" :class="{ alternative: !isAlternative }">
                 <div class="title">Cozy House</div>
                 <div class="sub-title">Shelter for pets in Boston</div>
             </div>
@@ -53,6 +53,9 @@ header {
     align-items: center;
     justify-content: space-between;
     z-index: 1000;
+}
+.alternative > * {
+    color: $color-dark-l;
 }
 .title {
     margin-bottom: 10px;

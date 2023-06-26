@@ -2,7 +2,7 @@
     <div class="wrapper">
         <Swiper
             :loop="true"
-            :breakpoints="swiperBreakpoints"
+            :breakpoints="breakpoints"
             :centered-slides="false"
             :grab-cursor="true"
         >

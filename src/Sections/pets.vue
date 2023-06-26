@@ -1,12 +1,12 @@
 <template>
-    <section>
+    <section id="pets">
         <div class="container">
             <h3>
                 Our friends who <br />
                 are looking for a house
             </h3>
             <PetsSwiper class="swiper" :breakpoints="breakpoints" />
-            <Button>Get to know the rest</Button>
+            <Button @click="navigateTo('/pets')">Get to know the rest</Button>
         </div>
     </section>
 </template>
@@ -16,7 +16,7 @@ import Button from '/src/shared/Button'
 import PetsSwiper from '/src/Features/PetsSwiper'
 const breakpoints = {
     320: {
-        slidesPerView: 3,
+        slidesPerView: 1,
     },
     768: {
         slidesPerView: 2,

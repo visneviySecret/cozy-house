@@ -5,8 +5,11 @@
                 <NuxtLink
                     v-for="link in links"
                     :key="link.title"
-                    :href="link.url"
-                    :class="{ alternative: isAlternative }"
+                    :to="link.url"
+                    :class="{
+                        alternative: isAlternative,
+                        isActive: $route.path === link.url,
+                    }"
                 >
                     {{ link.title }}</NuxtLink
                 >
@@ -28,7 +31,7 @@ const links = [
     },
     {
         title: 'Help the shelter',
-        url: '#helping',
+        url: '/#helping',
     },
     {
         title: 'Contacts',
@@ -68,6 +71,17 @@ const links = [
         opacity: 1;
         background-color: transparent;
         position: static;
+    }
+}
+
+.isActive {
+    &::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 3px;
+        background: $color-primary;
+        transition: width 0.3s;
     }
 }
 
