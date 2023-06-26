@@ -48,7 +48,6 @@ button {
 }
 
 .content {
-    font-size: 20px;
     line-height: 115%;
     letter-spacing: 1.2px;
 }

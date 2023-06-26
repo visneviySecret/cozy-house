@@ -6,6 +6,7 @@
             :breakpoints="swiperBreakpoints"
             :centered-slides="false"
             :navigation="true"
+            :grab-cursor="true"
         >
             <SwiperSlide v-for="pet in pets" :key="pet.id">
                 <Card :imgSrc="pet.img" :handleClick="() => openModal(pet)">{{

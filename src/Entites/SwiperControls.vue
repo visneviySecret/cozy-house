@@ -1,7 +1,11 @@
 <template>
     <div class="buttons-wrapper">
-        <RoundButton @click="swiper.slidePrev()">{{ `<` }}</RoundButton>
-        <RoundButton @click="swiper.slideNext()">{{ `>` }}</RoundButton>
+        <RoundButton @click="swiper.slidePrev()"
+            ><NuxtImg src="/assets/ui-icons/Arrow.svg"
+        /></RoundButton>
+        <RoundButton @click="swiper.slideNext()"
+            ><NuxtImg src="/assets/ui-icons/Arrow.svg" class="rotate"></NuxtImg
+        ></RoundButton>
     </div>
 </template>
 
@@ -30,5 +34,8 @@ const swiper = useSwiper()
         display: flex;
         justify-content: space-between;
     }
+}
+.rotate {
+    transform: rotate(180deg);
 }
 </style>
