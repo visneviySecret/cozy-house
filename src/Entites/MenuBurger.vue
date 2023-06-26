@@ -11,6 +11,7 @@ const { isActive } = defineProps(['isActive'])
 <style lang="scss" scoped>
 @import '/src/App/global.scss';
 .burger span {
+    translate: 0 10px;
     height: 2px;
     width: 30px;
     background-color: $color-primary;

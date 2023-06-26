@@ -1,19 +1,22 @@
 <template>
-    <div class="menu-wrapper">
-        <nav class="menu">
-            <NuxtLink
-                v-for="link in links"
-                :key="link.title"
-                :src="link.url"
-                :class="{ alternative: isAlternative }"
-            >
-                {{ link.title }}</NuxtLink
-            >
-        </nav>
-    </div>
+    <transition>
+        <div class="menu-wrapper">
+            <nav class="menu">
+                <NuxtLink
+                    v-for="link in links"
+                    :key="link.title"
+                    :href="link.url"
+                    :class="{ alternative: isAlternative }"
+                >
+                    {{ link.title }}</NuxtLink
+                >
+            </nav>
+        </div>
+    </transition>
 </template>
 
 <script setup>
+const isAlternative = true
 const links = [
     {
         title: 'About the shelter',
@@ -32,7 +35,6 @@ const links = [
         url: '#footer',
     },
 ]
-const isAlternative = true
 </script>
 
 <style lang="scss" scoped>
@@ -40,6 +42,7 @@ const isAlternative = true
 .menu-wrapper {
     position: fixed;
     inset: 0;
+    display: none;
     background-color: $color-dark-3xl;
     z-index: -1;
     opacity: 0;
@@ -48,6 +51,7 @@ const isAlternative = true
 
     &.active {
         opacity: 1;
+        display: block;
     }
 
     @media (max-width: $tablet) {
@@ -60,6 +64,7 @@ const isAlternative = true
     }
 
     @media (min-width: $tablet) {
+        display: block;
         opacity: 1;
         background-color: transparent;
         position: static;

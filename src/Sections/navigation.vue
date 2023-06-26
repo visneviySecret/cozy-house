@@ -5,8 +5,12 @@
                 <div class="title">Cozy House</div>
                 <div class="sub-title">Shelter for pets in Boston</div>
             </div>
-            <MenuBurger :isActive="isActive" @click="isActive = !isActive" />
-            <NavMenu :class="{ active: isActive }" />
+            <MenuBurger :isActive="isActive" @click="toggleActive" />
+            <NavMenu
+                :class="{ active: isActive }"
+                @click="resetMenu"
+                :isActive="isActive"
+            />
         </header>
     </div>
 </template>
@@ -15,7 +19,20 @@
 import NavMenu from '../Features/NavMenu.vue'
 import MenuBurger from '../Entites/MenuBurger.vue'
 import { ref } from 'vue'
+import useToggleScroll from '/src/shared/utils/useStopScroll'
+
 const isActive = ref(false)
+const { toggleScroll, enableScroll } = useToggleScroll()
+
+const toggleActive = () => {
+    isActive.value = !isActive.value
+    toggleScroll()
+}
+
+const resetMenu = () => {
+    isActive.value = false
+    enableScroll()
+}
 </script>
 
 <style lang="scss" scoped>
@@ -37,7 +54,8 @@ header {
     margin-bottom: 10px;
 }
 .burger {
-    width: 40px;
+    width: 30px;
+    height: 20px;
     @media (min-width: $tablet) {
         display: none;
     }
