@@ -5,7 +5,7 @@
                 Our friends who <br />
                 are looking for a house
             </h3>
-            <PetsSwiper class="swiper" />
+            <PetsSwiper class="swiper" :breakpoints="breakpoints" />
             <Button>Get to know the rest</Button>
         </div>
     </section>
@@ -14,6 +14,19 @@
 <script setup>
 import Button from '/src/shared/Button'
 import PetsSwiper from '/src/Features/PetsSwiper'
+const breakpoints = {
+    320: {
+        slidesPerView: 3,
+    },
+    768: {
+        slidesPerView: 2,
+        spaceBetween: 40,
+    },
+    1280: {
+        slidesPerView: 3,
+        spaceBetween: 90,
+    },
+}
 </script>
 
 <style lang="scss" scoped>

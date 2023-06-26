@@ -1,5 +1,5 @@
 <template>
-    <div class="header-wrapper">
+    <div class="header-container" :class="{ alternative: !isAlternative }">
         <header>
             <div class="logo">
                 <div class="title">Cozy House</div>
@@ -10,6 +10,7 @@
                 :class="{ active: isActive }"
                 @click="resetMenu"
                 :isActive="isActive"
+                :isAlternative="isAlternative"
             />
         </header>
     </div>
@@ -20,9 +21,9 @@ import NavMenu from '../Features/NavMenu.vue'
 import MenuBurger from '../Entites/MenuBurger.vue'
 import { ref } from 'vue'
 import useToggleScroll from '/src/shared/utils/useStopScroll'
-
-const isActive = ref(false)
+const { isAlternative } = defineProps(['isAlternative'])
 const { toggleScroll, enableScroll } = useToggleScroll()
+const isActive = ref(false)
 
 const toggleActive = () => {
     isActive.value = !isActive.value
@@ -37,15 +38,18 @@ const resetMenu = () => {
 
 <style lang="scss" scoped>
 @import '/src/App/global.scss';
-.header-wrapper {
-    position: absolute;
+.header-container {
     width: 100%;
+    position: absolute;
+    &.alternative {
+        position: static;
+    }
 }
 
 header {
     position: relative;
-    padding: clamp(30px, 3.9vw, 60px) clamp(10px, 4vw, 40px);
     display: flex;
+    padding: clamp(30px, 3.9vw, 60px) clamp(10px, 4vw, 40px);
     align-items: center;
     justify-content: space-between;
     z-index: 1000;

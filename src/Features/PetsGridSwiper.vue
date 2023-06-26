@@ -1,17 +1,20 @@
 <template>
-    <div class="wrapper">
+    <div>
         <Swiper
-            :loop="true"
-            :breakpoints="swiperBreakpoints"
+            :breakpoints="breakpoints"
             :centered-slides="false"
             :grab-cursor="true"
+            :modules="modules"
         >
-            <SwiperSlide v-for="pet in pets" :key="pet.id">
-                <Card :imgSrc="pet.img" :handleClick="() => openModal(pet)">{{
-                    pet.name
-                }}</Card>
+            <SwiperSlide v-for="pet in pets" :key="index">
+                <Card
+                    :key="pet.id"
+                    :imgSrc="pet.img"
+                    :handleClick="() => openModal(pet)"
+                    >{{ pet.name }}</Card
+                >
             </SwiperSlide>
-            <SwiperControls />
+            <SwiperGridControl :slidesLength="pets.length" />
         </Swiper>
         <PetModal
             :isModalActive="isModalActive"
@@ -25,11 +28,14 @@
 import { ref } from 'vue'
 import Card from '/src/Entites/Card'
 import PetModal from '../Entites/PetModal.vue'
-import SwiperControls from '/src/Entites/SwiperControls'
+import SwiperGridControl from '../Entites/SwiperGridControl.vue'
 import { Swiper, SwiperSlide } from 'swiper/vue'
+import { Grid } from 'swiper'
 import 'swiper/css'
-import pets from '/public/content/pets.json'
-const { breakpoints } = defineProps(['breakpoints'])
+import 'swiper/css/grid'
+
+const { breakpoints, pets } = defineProps(['breakpoints', 'pets'])
+const modules = [Grid]
 
 const choosedPet = ref({})
 const isModalActive = ref(false)
@@ -48,19 +54,14 @@ const closeModal = () => {
 <!-- Используем дочерний компонент -->
 <style lang="scss" scoped>
 @import '/src/App/global.scss';
-
 .swiper {
     position: relative;
     @media (min-width: $tablet) {
-        padding-inline: 12px;
+        max-width: 708px;
     }
 
     @media (min-width: $desktop) {
-        padding-inline: 52px;
+        max-width: 1200px;
     }
-}
-
-.swiper-slide {
-    width: 270px;
 }
 </style>

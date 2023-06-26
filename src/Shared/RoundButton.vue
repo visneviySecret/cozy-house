@@ -1,5 +1,5 @@
 <template>
-    <button :class="dynamicClass">
+    <button :class="[dynamicClass, { disabled: isDisabled }]">
         <div class="content">
             <slot />
         </div>
@@ -8,8 +8,8 @@
 
 <script setup>
 import { defineProps } from 'vue'
-const props = defineProps(['theme'])
-const dynamicClass = props.theme || 'outlined'
+const { theme, isDisabled } = defineProps(['theme', 'isDisabled'])
+const dynamicClass = theme || 'outlined'
 </script>
 
 <style lang="scss" scoped>
@@ -27,13 +27,15 @@ button {
     &:hover {
         background-color: var(--color-primary-light);
         cursor: pointer;
-        border-radius: 0%;
-        transition: background-color 0.3s, border-radius 0.3s ease-in-out;
+        transition: background-color 0.3s;
     }
 }
 .primary {
     border: none;
     background-color: var(--color-primary);
+    &:hover {
+        background-color: var(--color-primary);
+    }
 }
 .outlined {
     border-color: var(--color-primary);
@@ -43,7 +45,7 @@ button {
     border-color: var(--color-dark-s);
     &:hover {
         cursor: default;
-        background-color: white;
+        background-color: transparent;
     }
 }
 

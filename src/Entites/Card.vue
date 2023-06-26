@@ -38,4 +38,7 @@ const { url, imgSrc, handleClick } = defineProps([
         background: var(--color-light-xl);
     }
 }
+img {
+    object-fit: fill;
+}
 </style>

@@ -16,7 +16,7 @@
 </template>
 
 <script setup>
-const isAlternative = true
+const { isAlternative } = defineProps(['isAlternative'])
 const links = [
     {
         title: 'About the shelter',
