@@ -6,18 +6,17 @@
             <slot></slot>
         </h4>
 
-        <Button :theme="'outlined'" :onclick="handleClick">
-            <a>Learn more</a>
-        </Button>
+        <Button :theme="'outlined'" @click="handleClick">Learn more</Button>
     </div>
 </template>
 
 <script setup>
 import Button from '/src/shared/Button'
-const { url, imgSrc } = defineProps(['url', 'imgSrc'])
-const handleClick = () => {
-    window.open(url, '_blank')
-}
+const { url, imgSrc, handleClick } = defineProps([
+    'url',
+    'imgSrc',
+    'handleClick',
+])
 </script>
 
 <style lang="scss" scoped>

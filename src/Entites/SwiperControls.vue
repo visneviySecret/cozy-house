@@ -23,7 +23,8 @@ const swiper = useSwiper()
 
     @media (min-width: $tablet) {
         position: absolute;
-        inset: 0;
+        top: 0;
+        left: 0;
         top: 40%;
         width: 100%;
         display: flex;
