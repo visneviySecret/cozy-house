@@ -9,10 +9,12 @@
                     {{ pet.story }}
                 </p>
                 <ul class="info">
-                    <li v-for="(item, key) in info">
-                        <strong>{{ key }}:</strong>
-                        {{ item }}
-                    </li>
+                    <div v-for="(item, key) in pet">
+                        <li v-if="choosedKeys.indexOf(key) !== -1">
+                            <strong>{{ key }}:</strong>
+                            {{ item }}
+                        </li>
+                    </div>
                 </ul>
             </div>
             <RoundButton @click="handleClick"
@@ -30,13 +32,7 @@ const { handleClick, pet, isModalActive } = defineProps([
     'pet',
     'isModalActive',
 ])
-const info = {}
 const choosedKeys = ['age', 'inoculations', 'diseases', 'parasites']
-
-for (let key in pet) {
-    if (choosedKeys.indexOf(key) !== -1)
-        Object.assign(info, { [key]: pet[key] })
-}
 </script>
 
 <style lang="scss" scoped>
