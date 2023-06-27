@@ -25,10 +25,9 @@
 <script setup>
 import NavMenu from '../Features/NavMenu.vue'
 import MenuBurger from '../Entites/MenuBurger.vue'
-import { ref } from 'vue'
-import useToggleScroll from './utils/useStopScroll'
+import { onMounted, onBeforeUnmount, ref } from 'vue'
+
 const { isAlternative } = defineProps(['isAlternative'])
-const { toggleScroll, enableScroll } = useToggleScroll()
 const isActive = ref(false)
 
 const toggleActive = () => {
@@ -40,6 +39,28 @@ const resetMenu = () => {
     isActive.value = false
     enableScroll()
 }
+const isScrollEnabled = ref(false)
+
+const toggleScroll = () => {
+    if (isScrollEnabled.value) {
+        document.body.style.overflow = 'hidden'
+    } else {
+        enableScroll()
+    }
+    isScrollEnabled.value = !isScrollEnabled.value
+}
+
+const enableScroll = () => {
+    document.body.style.overflow = ''
+}
+
+onMounted(() => {
+    toggleScroll()
+})
+
+onBeforeUnmount(() => {
+    toggleScroll()
+})
 </script>
 
 <style lang="scss" scoped>
