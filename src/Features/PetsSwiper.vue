@@ -28,7 +28,7 @@ import PetModal from '../Entites/PetModal.vue'
 import SwiperControls from '@/src/Entites/SwiperControls'
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import 'swiper/css'
-import pets from '@/public/content/pets.json'
+import pets from '/public/content/pets.json'
 const { breakpoints } = defineProps(['breakpoints'])
 
 const choosedPet = ref({})

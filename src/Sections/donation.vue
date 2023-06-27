@@ -61,6 +61,9 @@ section {
     flex-direction: column;
     gap: 20px;
     align-items: center;
+    @media (min-width: $tablet) {
+        align-items: flex-start;
+    }
 }
 
 p:last-of-type {

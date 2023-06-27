@@ -30,11 +30,9 @@ import Button from '@/src/shared/Button.vue'
 <style lang="scss" scoped>
 @import '@/src/App/global.scss';
 .wrapper {
-    background: var(
-        --start-screen-gradient-background,
-        url('@/public/assets/noise_transparent.png'),
-        radial-gradient(237.5% 111.8% at 0% 0%, #5b483a 0%, #262425 100%)
-    );
+    background: url('@/public/assets/noise_transparent.png'),
+        radial-gradient(at 0% 0%, #5b483a 0%, #262425 100%),
+        $start-screen-gradient-background;
 
     @media (min-width: $desktop) {
         padding-top: 180px;

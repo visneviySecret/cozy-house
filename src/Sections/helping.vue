@@ -18,7 +18,7 @@
 </template>
 
 <script setup>
-import helps from '@/public/content/shelter-helps'
+import helps from '/public/content/shelter-helps'
 </script>
 
 <style lang="scss" scoped>

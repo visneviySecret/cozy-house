@@ -181,13 +181,12 @@ p {
         text-align: left;
     }
 }
-
+p,
 .sub-title,
 a {
     font-family: Arial;
 }
 
-p,
 h2,
 h3,
 h4,
@@ -198,6 +197,7 @@ button,
 .title,
 body {
     font-family: Georgia;
+    font-weight: 400;
     margin: 0;
 }
 
