@@ -3,7 +3,7 @@ module.exports = {
     build: {
         rollupOptions: {
             // другие опции rollup...
-            external: ['/src/shared/utils/useStopScroll'],
+            external: ['/src/shared/Button'],
         },
     },
 }
