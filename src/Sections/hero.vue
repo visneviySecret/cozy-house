@@ -69,6 +69,7 @@ h2 {
         margin-right: auto;
     }
 }
+
 p {
     color: $color-dark-s;
 }

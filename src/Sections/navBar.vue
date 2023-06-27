@@ -1,11 +1,17 @@
 <template>
     <div class="header-container" :class="{ alternative: !isAlternative }">
         <header>
-            <div class="logo" :class="{ alternative: !isAlternative }">
+            <div
+                class="logo"
+                :class="{ active: isActive, alternative: !isAlternative }"
+            >
                 <div class="title">Cozy House</div>
                 <div class="sub-title">Shelter for pets in Boston</div>
             </div>
-            <MenuBurger :isActive="isActive" @click="toggleActive" />
+            <MenuBurger
+                @click="toggleActive"
+                :class="{ active: isActive, alternative: !isAlternative }"
+            />
             <NavMenu
                 :class="{ active: isActive }"
                 @click="resetMenu"
@@ -53,9 +59,17 @@ header {
     align-items: center;
     justify-content: space-between;
     z-index: 1000;
+    max-width: 1200px;
+    margin-inline: auto;
 }
 .alternative > * {
     color: $color-dark-l;
+}
+.active.logo > .title {
+    color: $color-primary;
+}
+.active.logo > .sub-title {
+    color: $color-light-xl;
 }
 .title {
     margin-bottom: 10px;

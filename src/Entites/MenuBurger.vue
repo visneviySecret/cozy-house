@@ -1,15 +1,22 @@
 <template>
-    <div class="burger" :class="{ active: isActive }">
+    <div class="burger">
         <span />
     </div>
 </template>
 
-<script setup>
-const { isActive } = defineProps(['isActive'])
-</script>
-
 <style lang="scss" scoped>
 @import '/src/App/global.scss';
+.alternative .burger span,
+.alternative .burger span:before,
+.alternative .burger span:after {
+    background-color: black;
+}
+.burger.alternative.active span,
+.burger.alternative.active span:before,
+.burger.alternative.active span:after {
+    background-color: $color-primary;
+}
+
 .burger span {
     translate: 0 10px;
     height: 2px;
