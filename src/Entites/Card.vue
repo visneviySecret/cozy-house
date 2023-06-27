@@ -11,7 +11,7 @@
 </template>
 
 <script setup>
-import Button from '/src/shared/Button'
+import Button from '@/src/shared/Button'
 const { url, imgSrc, handleClick } = defineProps([
     'url',
     'imgSrc',

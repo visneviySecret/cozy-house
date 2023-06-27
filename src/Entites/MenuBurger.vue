@@ -5,7 +5,7 @@
 </template>
 
 <style lang="scss" scoped>
-@import '/src/App/global.scss';
+@import '@/src/App/global.scss';
 .alternative .burger span,
 .alternative .burger span:before,
 .alternative .burger span:after {

@@ -18,11 +18,11 @@
 </template>
 
 <script setup>
-import helps from '/public/content/shelter-helps'
+import helps from '@/public/content/shelter-helps'
 </script>
 
 <style lang="scss" scoped>
-@import '/src/App/global.scss';
+@import '@/src/App/global.scss';
 
 h3 {
     text-align: center;

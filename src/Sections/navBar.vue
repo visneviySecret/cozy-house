@@ -64,7 +64,7 @@ onBeforeUnmount(() => {
 </script>
 
 <style lang="scss" scoped>
-@import '/src/App/global.scss';
+@import '@/src/App/global.scss';
 .header-container {
     width: 100%;
     position: absolute;

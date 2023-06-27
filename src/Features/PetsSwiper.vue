@@ -23,12 +23,12 @@
 
 <script setup>
 import { ref } from 'vue'
-import Card from '/src/Entites/Card'
+import Card from '@/src/Entites/Card'
 import PetModal from '../Entites/PetModal.vue'
-import SwiperControls from '/src/Entites/SwiperControls'
+import SwiperControls from '@/src/Entites/SwiperControls'
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import 'swiper/css'
-import pets from '/public/content/pets.json'
+import pets from '@/public/content/pets.json'
 const { breakpoints } = defineProps(['breakpoints'])
 
 const choosedPet = ref({})
@@ -47,7 +47,7 @@ const closeModal = () => {
 
 <!-- Используем дочерний компонент -->
 <style lang="scss" scoped>
-@import '/src/App/global.scss';
+@import '@/src/App/global.scss';
 
 .swiper {
     position: relative;

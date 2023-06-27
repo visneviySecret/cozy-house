@@ -34,11 +34,11 @@
 </template>
 
 <script setup>
-import { cardNumber } from '/public/content/card-number'
+import { cardNumber } from '@/public/content/card-number'
 </script>
 
 <style lang="scss" scoped>
-@import '/src/App/global.scss';
+@import '@/src/App/global.scss';
 section {
     background: $color-light-l;
 }

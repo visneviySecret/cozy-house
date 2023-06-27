@@ -12,8 +12,8 @@
 </template>
 
 <script setup>
-import Button from '/src/shared/Button'
-import PetsSwiper from '/src/Features/PetsSwiper'
+import Button from '@/src/shared/Button'
+import PetsSwiper from '@/src/Features/PetsSwiper'
 const breakpoints = {
     320: {
         slidesPerView: 1,
@@ -30,7 +30,7 @@ const breakpoints = {
 </script>
 
 <style lang="scss" scoped>
-@import '/src/App/global.scss';
+@import '@/src/App/global.scss';
 
 section {
     background: $color-light-l;

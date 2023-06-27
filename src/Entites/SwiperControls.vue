@@ -10,14 +10,14 @@
 </template>
 
 <script setup>
-import RoundButton from '/src/shared/RoundButton'
+import RoundButton from '@/src/shared/RoundButton'
 import { useSwiper } from 'swiper/vue'
 
 const swiper = useSwiper()
 </script>
 
 <style lang="scss" scoped>
-@import '/src/App/global.scss';
+@import '@/src/App/global.scss';
 .buttons-wrapper {
     width: 184px;
     margin: 20px auto 0;

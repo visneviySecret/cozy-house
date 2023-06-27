@@ -41,7 +41,7 @@ const links = [
 </script>
 
 <style lang="scss" scoped>
-@import '/src/App/global.scss';
+@import '@/src/App/global.scss';
 .menu-wrapper {
     position: fixed;
     inset: 0;

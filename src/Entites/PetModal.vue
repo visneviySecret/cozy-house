@@ -36,7 +36,7 @@ const choosedKeys = ['age', 'inoculations', 'diseases', 'parasites']
 </script>
 
 <style lang="scss" scoped>
-@import '/src/App/global.scss';
+@import '@/src/App/global.scss';
 
 .wrapper {
     position: relative;

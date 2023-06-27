@@ -15,8 +15,8 @@
 </template>
 
 <script setup>
-import PetsGridSwiper from '/src/Features/PetsGridSwiper'
-import pets from '/public/content/pets.json'
+import PetsGridSwiper from '@/src/Features/PetsGridSwiper'
+import pets from '@/public/content/pets.json'
 
 const breakpoints = {
     300: {
@@ -47,7 +47,7 @@ const breakpoints = {
 </script>
 
 <style lang="scss" scoped>
-@import '/src/App/global.scss';
+@import '@/src/App/global.scss';
 
 section {
     background: $color-light-l;

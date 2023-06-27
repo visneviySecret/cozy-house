@@ -27,16 +27,16 @@
 </template>
 
 <script setup>
-import RoundButton from '/src/shared/RoundButton'
-import SingleArrow from '/src/shared/icons/SingleArrow'
-import DoubleArrow from '/src/shared/icons/DoubleArrow'
+import RoundButton from '@/src/shared/RoundButton'
+import SingleArrow from '@/src/shared/icons/SingleArrow'
+import DoubleArrow from '@/src/shared/icons/DoubleArrow'
 import { useSwiper } from 'swiper/vue'
 const { slidesLength } = defineProps(['slidesLength'])
 const swiper = useSwiper()
 </script>
 
 <style lang="scss" scoped>
-@import '/src/App/global.scss';
+@import '@/src/App/global.scss';
 .buttons-wrapper {
     min-width: 184px;
     max-width: 340px;

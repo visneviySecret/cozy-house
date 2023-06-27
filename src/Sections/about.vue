@@ -32,7 +32,7 @@
 </template>
 
 <style lang="scss" scoped>
-@import '/src/App/global.scss';
+@import '@/src/App/global.scss';
 section {
     max-width: 430px;
     margin-inline: auto;

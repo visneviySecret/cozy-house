@@ -28,11 +28,11 @@ import Button from '@/src/shared/Button.vue'
 </script>
 
 <style lang="scss" scoped>
-@import '/src/App/global.scss';
+@import '@/src/App/global.scss';
 .wrapper {
     background: var(
         --start-screen-gradient-background,
-        url('/public/assets/noise_transparent.png'),
+        url('@/public/assets/noise_transparent.png'),
         radial-gradient(237.5% 111.8% at 0% 0%, #5b483a 0%, #262425 100%)
     );
 

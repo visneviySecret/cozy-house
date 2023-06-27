@@ -43,13 +43,13 @@
 <script setup></script>
 
 <style lang="scss" scoped>
-@import '/src/App/global.scss';
+@import '@/src/App/global.scss';
 
 footer {
     padding-top: clamp(30px, 4vw, 40px);
     background: var(
         ---footer-gradient-background,
-        url('/public/assets/noise_transparent.png'),
+        url('@/public/assets/noise_transparent.png'),
         radial-gradient(549.89% 73.65% at 5.73% 50%, #513d2f 0%, #1a1a1c 100%),
         #211f20
     );
