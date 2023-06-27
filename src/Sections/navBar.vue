@@ -26,7 +26,7 @@
 import NavMenu from '../Features/NavMenu.vue'
 import MenuBurger from '../Entites/MenuBurger.vue'
 import { ref } from 'vue'
-import useToggleScroll from './shared/utils/useStopScroll'
+import useToggleScroll from '../shared/utils/useStopScroll'
 const { isAlternative } = defineProps(['isAlternative'])
 const { toggleScroll, enableScroll } = useToggleScroll()
 const isActive = ref(false)
