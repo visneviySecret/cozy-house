@@ -3,28 +3,34 @@
         <div class="container">
             <div class="contacts">
                 <div class="topic">
-                    <h3>For questions and suggestions</h3>
+                    <h3 v-motion-fade-visible-once>
+                        For questions and suggestions
+                    </h3>
                     <div class="row">
                         <NuxtImg src="/assets/contacts_icons/icon-email.svg" />
-                        <h4>email@shelter.com</h4>
+                        <h4 v-motion-fade-visible-once>email@shelter.com</h4>
                     </div>
                     <div class="row">
                         <NuxtImg src="/assets/contacts_icons/icon-phone.svg" />
-                        <h4>+13 674 567 75 54</h4>
+                        <h4 v-motion-fade-visible-once>+13 674 567 75 54</h4>
                     </div>
                 </div>
                 <div class="topic">
-                    <h3>We are waiting for your visit</h3>
+                    <h3 v-motion-fade-visible-once>
+                        We are waiting for your visit
+                    </h3>
                     <div class="row">
                         <NuxtImg src="/assets/contacts_icons/icon-marker.svg" />
-                        <h4>
+                        <h4 v-motion-fade-visible-once>
                             1 Central Street, Boston<br />(entrance from the
                             store)
                         </h4>
                     </div>
                     <div class="row">
                         <NuxtImg src="/assets/contacts_icons/icon-marker.svg" />
-                        <h4>18 South Park, London</h4>
+                        <h4 v-motion-fade-visible-once>
+                            18 South Park, London
+                        </h4>
                     </div>
                 </div>
             </div>

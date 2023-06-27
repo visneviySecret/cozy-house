@@ -1,7 +1,7 @@
 <template>
     <section>
         <div class="container">
-            <h3>
+            <h3 v-motion-fade>
                 Our friends who <br />
                 are looking for a house
             </h3>

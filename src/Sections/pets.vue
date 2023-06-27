@@ -1,7 +1,7 @@
 <template>
     <section id="pets">
         <div class="container">
-            <h3>
+            <h3 v-motion-fade-visible-once>
                 Our friends who <br />
                 are looking for a house
             </h3>
@@ -14,6 +14,7 @@
 <script setup>
 import Button from '@/src/shared/Button'
 import PetsSwiper from '@/src/Features/PetsSwiper'
+
 const breakpoints = {
     320: {
         slidesPerView: 1,

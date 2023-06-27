@@ -5,7 +5,7 @@ export default defineNuxtConfig({
         pages: 'src/Pages/',
         layouts: 'src/Layouts/',
     },
-    modules: ['@nuxt/image'],
+    modules: ['@nuxt/image', '@vueuse/motion/nuxt'],
     app: {
         head: {
             title: 'Cozy House',

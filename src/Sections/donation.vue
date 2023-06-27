@@ -2,18 +2,20 @@
     <section>
         <div class="container">
             <div class="content">
-                <h3>
+                <h3 v-motion-fade-visible-once>
                     You can also <br />
                     make a donation
                 </h3>
-                <span>Name of the bank / Type of bank account</span>
-                <div class="credit-card">
+                <span v-motion-fade-visible-once
+                    >Name of the bank / Type of bank account</span
+                >
+                <div class="credit-card" v-motion-fade-visible-once>
                     <NuxtImg src="/assets/help_icons/credit-card.svg" />
                     <h5>
                         {{ cardNumber }}
                     </h5>
                 </div>
-                <p>
+                <p v-motion-fade-visible-once>
                     Legal information and lorem ipsum dolor sit amet,
                     consectetur adipiscing elit. Maecenas a ipsum at libero
                     sagittis dignissim sed ac diam. Praesent ultrices maximus

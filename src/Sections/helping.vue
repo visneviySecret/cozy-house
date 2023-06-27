@@ -1,12 +1,12 @@
 <template>
     <section id="helping" class="container">
-        <h3>
+        <h3 v-motion-fade-visible-once>
             How you can help<br />
             our shelter
         </h3>
         <div class="grid">
             <div v-for="help in helps">
-                <div>
+                <div v-motion-fade-visible-once>
                     <img :src="help.img" :alt="help.title" />
                     <h5>
                         {{ help.title }}

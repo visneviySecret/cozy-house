@@ -1,9 +1,9 @@
 <template>
     <div class="card">
-        <img :src="imgSrc" />
+        <img :src="imgSrc" v-motion-fade />
 
-        <h4>
-            <slot></slot>
+        <h4 v-motion-fade>
+            <slot />
         </h4>
 
         <Button :theme="'outlined'" @click="handleClick">Learn more</Button>
