@@ -5,5 +5,5 @@
 
 <script setup>
 import NavBar from '/src/Sections/navBar'
-import GridPets from '../Sections/gridPets.vue'
+import GridPets from '/src//Sections/gridPets.vue'
 </script>
