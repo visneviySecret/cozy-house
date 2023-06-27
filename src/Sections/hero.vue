@@ -24,7 +24,7 @@
 </template>
 
 <script setup>
-import Button from '/src/shared/Button'
+import Button from '~/src/shared/Button'
 </script>
 
 <style lang="scss" scoped>
