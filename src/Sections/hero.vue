@@ -24,7 +24,7 @@
 </template>
 
 <script setup>
-import Button from '../shared/Button.vue'
+import Button from '@/src/shared/Button.vue'
 </script>
 
 <style lang="scss" scoped>
