@@ -1,5 +1,4 @@
 export default defineNuxtConfig({
-    devtools: { enabled: true },
     css: ['~/src/App/global.scss'],
     modules: ['@nuxt/image'],
     app: {
