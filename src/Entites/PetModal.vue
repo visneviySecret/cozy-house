@@ -25,8 +25,8 @@
 </template>
 
 <script setup>
-import Modal from '../shared/Modal.vue'
-import RoundButton from '../shared/RoundButton.vue'
+import Modal from '../Shared/Modal.vue'
+import RoundButton from '../Shared/RoundButton.vue'
 const { handleClick, pet, isModalActive } = defineProps([
     'handleClick',
     'pet',
