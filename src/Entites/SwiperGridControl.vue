@@ -27,9 +27,9 @@
 </template>
 
 <script setup>
-import RoundButton from '@/src/shared/RoundButton'
-import SingleArrow from '@/src/shared/icons/SingleArrow'
-import DoubleArrow from '@/src/shared/icons/DoubleArrow'
+import RoundButton from '@/src/Shared/RoundButton'
+import SingleArrow from '@/src/Shared/icons/SingleArrow'
+import DoubleArrow from '@/src/Shared/icons/DoubleArrow'
 import { useSwiper } from 'swiper/vue'
 const { slidesLength } = defineProps(['slidesLength'])
 const swiper = useSwiper()

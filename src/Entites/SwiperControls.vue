@@ -10,7 +10,7 @@
 </template>
 
 <script setup>
-import RoundButton from '@/src/shared/RoundButton'
+import RoundButton from '@/src/Shared/RoundButton'
 import { useSwiper } from 'swiper/vue'
 
 const swiper = useSwiper()
