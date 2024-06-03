@@ -1,3 +1,5 @@
+import path from 'path'
+
 export default defineNuxtConfig({
     devtools: { enabled: true },
     css: ['~/src/App/global.scss'],
@@ -14,5 +16,11 @@ export default defineNuxtConfig({
     },
     build: {
         transpile: ['@nuxtjs/composition-api', '@nuxtjs/vite'],
+    },
+    vite: {
+        alias: {
+            '@': path.resolve(__dirname, 'src'),
+        },
+        extensions: ['.vue', '.js', '.ts'],
     },
 })
