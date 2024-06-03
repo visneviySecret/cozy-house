@@ -12,4 +12,7 @@ export default defineNuxtConfig({
             meta: [{ name: 'description', content: 'Shelter-dom' }],
         },
     },
+    build: {
+        transpile: ['@nuxtjs/composition-api', '@nuxtjs/vite'],
+    },
 })
