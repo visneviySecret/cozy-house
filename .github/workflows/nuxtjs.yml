@@ -38,6 +38,9 @@ jobs:
                   npm -v
               shell: bash
 
+            - name: Change to project directory
+              run: cd cozy-house
+
             - name: Install dependencies
               run: npm install
 
@@ -58,9 +61,11 @@ jobs:
             - name: Checkout repository
               run: git clone https://github.com/${{ github.repository }}.git
 
+            - name: Change to project directory
+              run: cd cozy-house
+
             - name: Deploy to GitHub Pages
               run: |
-                  cd cozy-house
                   git checkout gh-pages
                   git rm -r .
                   cp -a ../dist/. .
