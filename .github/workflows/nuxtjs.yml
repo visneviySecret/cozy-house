@@ -18,12 +18,15 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Checkout
-              run: git clone https://github.com/${{ github.repository }}.git
+              uses: actions/checkout@v2
 
             - name: Display current directory and contents
               run: |
                   pwd
                   ls -la
+
+            - name: Change to project directory
+              run: cd cozy-house
 
             - name: Detect package manager
               id: detect-package-manager
@@ -37,9 +40,6 @@ jobs:
                   node -v
                   npm -v
               shell: bash
-
-            - name: Change to project directory
-              run: cd cozy-house
 
             - name: Install dependencies
               run: npm install
@@ -59,7 +59,7 @@ jobs:
         needs: build
         steps:
             - name: Checkout repository
-              run: git clone https://github.com/${{ github.repository }}.git
+              uses: actions/checkout@v2
 
             - name: Change to project directory
               run: cd cozy-house
