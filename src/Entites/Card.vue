@@ -11,7 +11,7 @@
 </template>
 
 <script setup>
-import Button from '@/src/shared/Button.vue'
+import Button from '@/src/Shared/Button.vue'
 const { url, imgSrc, handleClick } = defineProps([
     'url',
     'imgSrc',

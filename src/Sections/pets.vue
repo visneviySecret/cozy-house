@@ -12,7 +12,7 @@
 </template>
 
 <script setup>
-import Button from '@/src/shared/Button.vue'
+import Button from '@/src/Shared/Button.vue'
 import PetsSwiper from '@/src/Features/PetsSwiper'
 
 const breakpoints = {
